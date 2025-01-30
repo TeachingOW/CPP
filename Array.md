@@ -46,7 +46,7 @@ if (found) {
 
 ### C++
 ```cpp
-int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}}; // Declares a 2x3 matrix
+int matrix[2][3] = { {1, 2, 3}, {4, 5, 6}}; // Declares a 2x3 matrix
 ```
 
 ## Printing Matrix Elements:
@@ -78,7 +78,7 @@ std::cout << "Sum of the first row: " << rowSum << std::endl;
 
 ### C++
 ```cpp
-int cube[2][2][2] = {{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}};
+int cube[2][2][2] = {  { {1, 2}, {3, 4}},  { { 5, 6}, {7, 8}}};
 ```
 
 ## Printing Cube Elements:
@@ -138,7 +138,7 @@ In C++, 2D arrays are typically stored in row-major order in memory. This means 
 
 #### C++
 ```cpp
-int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};
+int matrix[2][3] = { {1, 2, 3}, {4, 5, 6}};
 ```
 
 ### Visual Representation:
@@ -184,7 +184,7 @@ int (*ptr)[3]; // Pointer to an array of 3 integers
 
 ### Initialization:
 ```cpp
-int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}}; 
+int matrix[2][3] = { {1, 2, 3}, {4, 5, 6}}; 
 ptr = matrix; // Assign address of the matrix to the pointer
 ```
 

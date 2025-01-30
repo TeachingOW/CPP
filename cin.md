@@ -33,6 +33,7 @@ int main() {
    - `y` is then incremented to `6`.
 
 ### **Difference Between Post-Increment (`y++`) and Pre-Increment (`++y`):**
+
 | Expression  | Effect |
 |-------------|--------|
 | `z = y++;`  | Assigns `y` to `z`, then increments `y` |

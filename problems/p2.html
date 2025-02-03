@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Prime Number Check in C++</title>
+    <title>GCD Calculation in C++</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -15,7 +15,7 @@
     </style>
 </head>
 <body>
-    <h1>Step-by-Step Guide to Check for Prime Number in C++</h1>
+    <h1>Step-by-Step Guide to Finding GCD in C++</h1>
     
     <div class="step active" id="step1">
         <h2>1. Structure of a C++ Program</h2>
@@ -30,39 +30,37 @@ int main() {
     </div>
     
     <div class="step" id="step2">
-        <h2>2. Reading a Number from the Keyboard</h2>
+        <h2>2. Reading Two Numbers from the Keyboard</h2>
         <p>To take user input in C++:</p>
         <pre><code>#include &lt;iostream&gt;
 using namespace std;
 
 int main() {
-    int num;
-    cout << "Enter a number: ";
-    cin >> num;
-    cout << "You entered: " << num << endl;
+    int a, b;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+    cout << "You entered: " << a << " and " << b << endl;
     return 0;
 }</code></pre>
     </div>
     
     <div class="step" id="step3">
-        <h2>3. Pseudocode for Checking Prime Number</h2>
+        <h2>3. Pseudocode for Finding GCD</h2>
         <p>Before writing the code, let's outline the logic using pseudocode:</p>
-        <pre><code>Function isPrime(num):
-    If num < 2:
-        Return false
-    For i from 2 to num - 1:
-        If num % i == 0:
-            Return false
-    Return true</code></pre>
+        <pre><code>Function gcd(a, b):
+    While b ≠ 0:
+        temp = b
+        b = a % b
+        a = temp
+    Return a</code></pre>
     </div>
 
     <div class="step" id="step4">
-        <h2>4. Optimizing the Check</h2>
+        <h2>4. Optimizing the GCD Calculation</h2>
         <p>To improve efficiency:</p>
         <ul>
-            <li>Skip even numbers after checking for 2.</li>
-            <li>Only check up to the square root of the number.</li>
-            <li>Use <code>i += 2</code> to avoid unnecessary even checks.</li>
+            <li>Use the Euclidean Algorithm for efficient computation.</li>
+            <li>Iterate using modulus instead of subtraction.</li>
         </ul>
     </div>
 

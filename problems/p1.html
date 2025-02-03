@@ -25,13 +25,12 @@
         Return false
     If num == 2:
         Return true
-    If num is even:
-        Return false
-    For i from 3 to sqrt(num), step by 2:
+    For i from 2 to num-1:
         If num % i == 0:
             Return false
     Return true</code></pre>
     </div>
+
 
     <div class="step" id="step4">
         <h2>4. Optimizing the Check</h2>
@@ -46,16 +45,9 @@
 
 
           
-}</code></pre>
-    </div>
-
-    <div class="step" id="step5">
-        <h2>5. Full Optimized Program</h2>
-        <p>Complete program implementing the optimized approach:</p>
-        <pre><code>#include &lt;iostream&gt;
-
 </code></pre>
     </div>
+
     
     <div class="nav">
         <button onclick="prevStep()">&#9664; Previous</button>
@@ -70,13 +62,13 @@
             });
         }
         function nextStep() {
-            if (currentStep < 5) {
+            if (currentStep < 4) {
                 currentStep++;
                 showStep(currentStep);
             }
         }
         function prevStep() {
-            if (currentStep > 3) {
+            if (currentStep > 2) {
                 currentStep--;
                 showStep(currentStep);
             }

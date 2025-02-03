@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Number Check in C++</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        code { background: #f4f4f4; padding: 2px 5px; border-radius: 5px; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        .step { display: none; }
+        .active { display: block; }
+        .nav { margin-top: 10px; }
+        button { padding: 10px; margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Step-by-Step Guide to Check for Prime Number in C++</h1>
+    
+    <div class="step active" id="step3">
+        <h2>3. Pseudocode for Checking Prime Number</h2>
+        <p>Before writing the code, let's outline the logic using pseudocode:</p>
+        <pre><code>Function isPrime(num):
+    If num < 2:
+        Return false
+    If num == 2:
+        Return true
+    If num is even:
+        Return false
+    For i from 3 to sqrt(num), step by 2:
+        If num % i == 0:
+            Return false
+    Return true</code></pre>
+    </div>
+
+    <div class="step" id="step4">
+        <h2>4. Optimizing the Check</h2>
+        <p>To improve efficiency:</p>
+        <ul>
+            <li>Skip even numbers after checking for 2.</li>
+            <li>Only check up to the square root of the number.</li>
+              
+            <li>Use <code>i += 2</code> to avoid unnecessary even checks.</li>
+        </ul>
+        <pre><code>#include &lt;cmath&gt;
+
+
+          
+}</code></pre>
+    </div>
+
+    <div class="step" id="step5">
+        <h2>5. Full Optimized Program</h2>
+        <p>Complete program implementing the optimized approach:</p>
+        <pre><code>#include &lt;iostream&gt;
+
+</code></pre>
+    </div>
+    
+    <div class="nav">
+        <button onclick="prevStep()">&#9664; Previous</button>
+        <button onclick="nextStep()">Next &#9654;</button>
+    </div>
+    
+    <script>
+        let currentStep = 3;
+        function showStep(step) {
+            document.querySelectorAll('.step').forEach((el, index) => {
+                el.classList.toggle('active', index === step - 3);
+            });
+        }
+        function nextStep() {
+            if (currentStep < 5) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        }
+        function prevStep() {
+            if (currentStep > 3) {
+                currentStep--;
+                showStep(currentStep);
+            }
+        }
+        showStep(currentStep);
+    </script>
+</body>
+</html>

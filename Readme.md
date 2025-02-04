@@ -32,5 +32,5 @@ Function declaration vs function definition
 
 -    Prime number [Code](codesnippets/prime.cpp)
 -   Write prime numbers to a text file [Code](codesnippets/textfile.cpp)
-- Solve gcd 
+- Solve GCD (Decription)[problems/p2.html]
 

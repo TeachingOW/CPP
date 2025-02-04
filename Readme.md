@@ -1,9 +1,9 @@
 # C++ Spring 2025
 
 ## important links:
-    Lecture Notes: https://oldwestburyedu-my.sharepoint.com/:w:/g/personal/khalefam_oldwestbury_edu/EWSSURsZT9NGiYqhXCi_-j0BLAt0PIeUXrHbNTbdwf8Q9Q?e=Ihysl6
-    Jupyter notebook: https://colab.research.google.com/drive/1PxkFF249xs9OPQSL7hrwfsYBxzevtbxg
-    Cheat Sheet: [cheatsheet](cheatsheet.md)
+    Lecture Notes: [link](https://oldwestburyedu-my.sharepoint.com/:w:/g/personal/khalefam_oldwestbury_edu/EWSSURsZT9NGiYqhXCi_-j0BLAt0PIeUXrHbNTbdwf8Q9Q?e=Ihysl6)
+    Jupyter notebook: [colab](https://colab.research.google.com/drive/1PxkFF249xs9OPQSL7hrwfsYBxzevtbxg)
+    Cheat Sheet: [cheatsheet](/cheatsheet.md)
 
 
 # Week 1
@@ -22,6 +22,8 @@ Hello world in C++
 using namespace std; // Standard library of C++
 
 int main(){  //program entry point
+    
+    cout << "Hello World"<<endl;
     return 0;
 }
 ```

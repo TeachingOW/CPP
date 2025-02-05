@@ -35,15 +35,35 @@ void print(){
       for(int j=0;j<3;j++)
         cout << board[i][j] << " ";
     
-    cout <<"\n";
+    
     }
+    cout <<"\n";
+}
+
+void generate_boards(int index){
+    if(index==9){
+        //print board
+        print();
+        return;
+    }
+    int r=index/3;
+    int c=index%3;
+    board[r][c]='X';
+    generate_boards(index+1);
+    board[r][c]='O';
+    generate_boards(index+1);
+    board[r][c]='-';
+    generate_boards(index+1);
+}
+
+void generate_all_board(){
+    generate_boards(0);
 }
 
 };
 
 int main(){
 game g;
-g.set(1,3,'X');
-g.print();
+g.generate_all_board();
 }
 

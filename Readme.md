@@ -1,17 +1,18 @@
 # C++ Spring 2025
 
-## important links:
+## Important Links:
 - Lecture Notes: [link](https://oldwestburyedu-my.sharepoint.com/:w:/g/personal/khalefam_oldwestbury_edu/EWSSURsZT9NGiYqhXCi_-j0BLAt0PIeUXrHbNTbdwf8Q9Q?e=Ihysl6)
 - Jupyter notebook: [colab](https://colab.research.google.com/drive/1PxkFF249xs9OPQSL7hrwfsYBxzevtbxg)
 - Cheat Sheet: [cheatsheet](/cheatsheet.md)
+- Installation guide [here](/install.md)
 
 
 # Week 1
 
 ## Introduction to C++
 - C++ is similar in syntax to Java
-- Review java syntax
-- C/C++ is not inhently objected oriented language
+- Review Java syntax
+- C/C++ is not an inherently objected oriented language
 
 
 Hello world in C++

@@ -11,7 +11,7 @@ int main() {
         return 1;
     }
     
-    for (int n = 1; n <= 1000;n++)
+    for (int n = 1; n <= 10000;n++)
         if (is_prime(n))
             fout << n <<" \n";
     fout.close();    

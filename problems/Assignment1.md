@@ -6,7 +6,8 @@ You are tasked with modifying the Tic-Tac-Toe program to work with binary repres
 ### **Steps to Follow:**
 
 1. **Modify the Tic-Tac-Toe Program to Write Boards in Binary:**
-    - Convert the game board (3x3 grid) to a binary representation. 
+    - Convert the game board (3x3 grid) to a binary representation, code is
+    [here](/codesnippets/tictactoe.cpp).
     - You are free to choose any format.
     - Write the binary representations of the boards to a file.
 

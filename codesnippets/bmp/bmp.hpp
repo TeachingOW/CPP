@@ -33,7 +33,7 @@ public:
     BMP(int width, int height) : width(width), height(height) {
         row_size = width * 3;  // 3 bytes per pixel
         padded_row_size = (row_size + 3) & ~3; // Align to 4-byte boundary
-        data.resize(padded_row_size * height, 0); // Initialize with black
+        data.resize(padded_row_size * height, 255); // Initialize with white
     }
 
     BMP(const std::string& file_name) {

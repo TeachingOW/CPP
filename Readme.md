@@ -36,8 +36,27 @@ Function declaration vs function definition
 -  Prime number [Code](codesnippets/prime.cpp)
 -  Write prime numbers to a text file [Code](codesnippets/textfile.cpp)
 -  Solve GCD Problem [Description](problems/p2.html)
-  
+-  use Files
+-  Tic Tac Toe   
 
 # Week 3
 
-Call by reference and by value
+- Call by reference and by value
+- vector
+    - size(), constructor, [], push_back
+- Random number
+    - rand(), RAND_MAX
+    - simulate dice
+    - estimate $\pi$[^1].
+- arguments in programs i.e., argc, argv
+
+
+
+
+
+
+
+[^1]: There are other forumlas to compute $\pi$, such as 
+            $\pi = 4 \times \sum_{n=0}^{\infty} \frac{(-1)^n}{2n + 1}$
+    
+    

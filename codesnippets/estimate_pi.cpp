@@ -1,5 +1,7 @@
 #include <cstdlib>
 #include <iostream>
+#include <iomanip>
+#include <cmath>
 using namespace std;
 
 #define PBSTR                                                                  \
@@ -64,7 +66,7 @@ double estimate3(long long n, bool verbose = false) {
     unsigned long long d2 = x * x + y * y;
     if (verbose) {
       double f = (double)i / n;
-      if (fabs(f - fold) > 0.01) {
+      if (fabs(f - fold) > 0.01) { // float comprasions
         fold = f;
         print_progress(f);
       }
@@ -78,6 +80,8 @@ double estimate3(long long n, bool verbose = false) {
 }
 
 int main(int argc, char *argv[]) {
+//usage ./a.out 1000000000 3 t
+
   long long a = atoll(argv[1]);
   bool v = false;
   if (argc >= 4) {
@@ -92,6 +96,6 @@ int main(int argc, char *argv[]) {
     else
       pi = estimate(a, v);
 
-    cout << "\n" << pi << endl;
+    cout <<  "\n" <<std::setprecision(15)<< pi << endl;
   }
 }

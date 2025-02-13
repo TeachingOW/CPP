@@ -80,7 +80,7 @@ function applySquareBlur(image, blurSize):
 ---
 
 ## Code
-You can use the header file from the class [bmp.hpp](codesnippets/bmp/bmp.hpp).
+You can use the header file from the class [bmp.hpp](../codesnippets/bmp/bmp.hpp).
 You can use the samples bitmap images, [sample](sample.bmp), and [sample1](sample2.bmp) to test your code.
 
 # Project 

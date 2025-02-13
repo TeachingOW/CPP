@@ -36,7 +36,7 @@ Function declaration vs function definition
 -  Prime number [Code](codesnippets/prime.cpp)
 -  Write prime numbers to a text file [Code](codesnippets/textfile.cpp)
 -  Solve GCD Problem [Description](problems/p2.html)
--  use Files
+-  use Files [File](file)
 -  Tic Tac Toe   
 
 # Week 3
@@ -49,7 +49,7 @@ Function declaration vs function definition
     - simulate dice
     - estimate $\pi$[^1].
 - arguments in programs i.e., argc, argv
-
+- work with bitmap images [header](codesnippets/bmp/bmp.hpp),[test code](codesnippets/bmp/test.cpp)
 
 
 

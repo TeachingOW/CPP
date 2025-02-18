@@ -52,7 +52,17 @@ Function declaration vs function definition
 - work with bitmap images [header](codesnippets/bmp/bmp.hpp),[test code](codesnippets/bmp/test.cpp)
 
 
+## Next Topics:
 
+- pointers
+- casting
+- strings in C/C++
+- Rule of 3 and Rule of 5
+- operator overloading
+- templates
+- containers/iterators
+- auto, shorthand notations
+- lambda
 
 
 

@@ -60,6 +60,7 @@ Function declaration vs function definition
 - Rule of 3 and Rule of 5
 - operator overloading
 - templates
+- virtual functions
 - containers/iterators
 - auto, shorthand notations
 - lambda

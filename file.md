@@ -107,6 +107,38 @@ int main() {
 }
 ```
 
+**Reading from a Binary File (With EOF Handling):**
+
+```cpp
+#include <iostream>
+#include <fstream>
+
+struct Data {
+    int id;
+    char name[20];
+    double score;
+};
+
+int main() {
+    std::ifstream inFile("data.bin", std::ios::binary); // Open in binary mode
+    if (!inFile) {
+        std::cerr << "Error opening file!" << std::endl;
+        return 1;
+    }
+
+    Data record;
+    while (inFile.read(reinterpret_cast<char*>(&record), sizeof(record))) {
+        // Read until the end of the file
+        std::cout << "ID: " << record.id << "\nName: " << record.name << "\nScore: " << record.score << std::endl;
+    }
+
+    inFile.close();
+    return 0;
+}
+```
+
+In this case, we use `inFile.read()` inside a `while` loop to continuously read until the end of the file.
+
 ## 3. Appending to Files
 
 To append data to an existing file, open it with `std::ios::app` mode.

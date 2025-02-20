@@ -12,6 +12,7 @@
 The flood fill algorithm starts from a given pixel and fills all neigbour pixels of the same color with a new color until it encounters a boundary color. Use a `std::deque`  and a `visited` 2-d array.
 Assume the maximum image size is 1000x1000 pixels. 
 
+Hint: Define the `visited` globally.
 
 Assume a struct color values of r,g, b.
 
@@ -25,12 +26,12 @@ struct color{
 
 ### Pseudo Code for Non-Recursive Flood Fill with `visited`
 ```plaintext
-function floodFill(image, startX, startY, fillColor, boundaryColor):
+function floodFill(image, startX, startY, fillColor):
     if startX or startY is out of image bounds:
         return
     startColor = image.getPixel(startX, startY)
     // You need to compare red with red, green with green and blue with blue
-    if startColor == fillColor or startColor == boundaryColor: 
+    if startColor == fillColor: 
             return
     create a deque and add (startX, startY) to it
     create a 2D array `visited` of size (MAX_SIZE, MAX_SIZE) initialized to false

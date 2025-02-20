@@ -6,6 +6,10 @@
 - Cheat Sheet: [cheatsheet](/cheatsheet.md)
 - Installation guide [here](/install.md)
 
+## Assignements:
+
+-  [Assignment 1](problems/Assignment1)
+-  [Assignment 2](problems/Assignment2)
 
 # Week 1
 
@@ -51,9 +55,14 @@ Function declaration vs function definition
 - arguments in programs i.e., argc, argv
 - work with bitmap images [header](codesnippets/bmp/bmp.hpp),[test code](codesnippets/bmp/test.cpp)
 
+# Week 4
+- In class practice on Wedednsday
+- [Tutorial for deque](deque)
 
 ## Next Topics:
-
+- Include files and paths
+- Debugging
+- scope /local variable/global variable 
 - pointers
 - casting
 - strings in C/C++

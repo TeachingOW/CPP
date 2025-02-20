@@ -181,15 +181,6 @@ int main() {
 }
 ```
 
-### Explanation:
-1. **Opening the File:** We open the file `example.txt` in read mode using `std::ifstream`.
-2. **Reading Line by Line:** `std::getline(inFile, line)` reads one line at a time from the file.
-3. **EOF Check:** After reading each line, we use `inFile.eof()` to check if we've reached the end of the file. If we have, we break out of the loop.
-4. **Error Check:** We also check if `!inFile` to handle any errors that might occur during reading (such as a file read error).
-5. **Closing the File:** After the loop finishes, the file is closed.
-
-### Important Notes:
-- **EOF Behavior:** `std::getline()` sets the EOF flag (`eof()`) when it attempts to read past the last line. However, it's typically better to let the loop finish automatically, as `std::getline()` will return `false` when it reaches the EOF (thus breaking the loop).
   
 ### Simplified Version (More Common Usage):
 
@@ -246,18 +237,3 @@ int main() {
     return 0;
 }
 ```
-
-This code moves the file pointer to the end using `seekg()` and then tells us the position with `tellg()`, which will be the size of the binary file.
-
----
-
-### 5. **Conclusion**
-
-- EOF in text files is automatically handled by `std::getline()`. For binary files, you can use `read()` to check the return value to determine if you've reached the end of the file.
-- File size can be determined by moving the file pointer to the end with `seekg()` and then calling `tellg()` to get the file's size in bytes.
-- Use `ofstream` and `ifstream` for text files.
-- Use `ofstream` and `ifstream` in binary mode (`std::ios::binary`) for binary files.
-- Always check if a file opened successfully.
-- Always close files after operations.
-- Use `seekg()` and `seekp()` for random access in binary files.
-

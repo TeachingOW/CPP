@@ -170,7 +170,8 @@ int main() {
 }
 ```
 
-Write down an implementation for `strlen`.
+   Write down an implementation for `strlen`. </br>
+   **Solution** [soln](problems/length.cpp)
 
 ---
 

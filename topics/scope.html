@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope in C/C++</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        code { background: #f4f4f4; padding: 2px 5px; border-radius: 4px; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 4px; }
+        .section { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Understanding Scope in C/C++</h1>
+    <div class="section">
+        <h2>What is Scope?</h2>
+        <p>Scope in C/C++ determines where a variable can be accessed within a program.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Types of Scope</h2>
+        <h3>1. Local Scope</h3>
+        <p>Variables declared inside a function or block are local to that function/block.</p>
+        <pre>
+#include &lt;stdio.h&gt;
+void function() {
+    int x = 10; // Local variable
+    printf("x = %d", x);
+}
+int main() {
+    function();
+    // printf("x = %d", x); // Error: x is not accessible here
+    return 0;
+}
+        </pre>
+        
+        <h3>2. Global Scope</h3>
+        <p>Variables declared outside any function have global scope and can be accessed anywhere.</p>
+        <pre>
+#include &lt;stdio.h&gt;
+int globalVar = 5; // Global variable
+void function() {
+    printf("globalVar = %d", globalVar);
+}
+int main() {
+    function();
+    printf("globalVar in main = %d", globalVar);
+    return 0;
+}
+        </pre>
+        
+        <h3>3. Block Scope</h3>
+        <p>Variables declared inside a block (within { }) are accessible only within that block.</p>
+        <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    {
+        int y = 20;
+        printf("y = %d", y);
+    }
+    // printf("y = %d", y); // Error: y is not accessible here
+    return 0;
+}
+        </pre>
+        
+        <h3>4. Function Scope</h3>
+        <p>Functions have their own scope, meaning they can be accessed only within the file they are declared unless marked as <code>extern</code>.</p>
+        
+        <h3>5. File Scope</h3>
+        <p>File scope applies to variables and functions declared outside of functions but limited to the same file if marked as <code>static</code>.</p>
+        <pre>
+#include &lt;stdio.h&gt;
+static int fileVar = 10; // File scope variable
+void printVar() {
+    printf("fileVar = %d", fileVar);
+}
+int main() {
+    printVar();
+    return 0;
+}
+        </pre>
+    </div>
+    
+    <div class="section">
+        <h2>Scope Resolution Operator in C++</h2>
+        <p>In C++, the <code>::</code> operator is used to access global variables when there is a name conflict.</p>
+        <pre>
+#include &lt;iostream&gt;
+using namespace std;
+int x = 100; // Global variable
+int main() {
+    int x = 50; // Local variable
+    cout << "Local x: " << x << endl;
+    cout << "Global x: " << ::x << endl;
+    return 0;
+}
+        </pre>
+    </div>
+    
+    <div class="section">
+        <h2>Conclusion</h2>
+        <p>Understanding scope is crucial for managing variable lifetime and accessibility in C/C++ programs.</p>
+    </div>
+</body>
+</html>

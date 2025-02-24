@@ -59,6 +59,10 @@ Function declaration vs function definition
 - In class practice on Wedednsday
 - [Tutorial for deque](deque)
 
+# Week 5
+- [Pointers C] (topics/pointers)
+- [Pointers C++] (topics/pointers++)
+
 ## Next Topics:
 - Include files and paths
 - Debugging

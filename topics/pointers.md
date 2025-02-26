@@ -215,6 +215,31 @@ int main() {
 }
 ```
 
+### by value vs by reference
+```c++
+
+void increment_byreference(int *ptr) {
+    (*ptr)++;  
+}
+void increment_byvalue(int x) {
+    (x)++; 
+}
+
+void increment_byreference2(int &x) {
+    (x)++;  
+}
+
+int main() {
+    int x = 10;
+    increment_byreference(&x);   // incremented to 11
+    increment_byvalue(x);  //stay 11
+   increment_byreference2(x); // incremented to 12
+    return 0;
+}
+
+```
+
+
 ### Returning Pointers from Functions
 Functions can also return pointers. Be careful to avoid returning pointers to local variables, as they go out of scope after the function returns.
 

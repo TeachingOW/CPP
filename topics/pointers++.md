@@ -123,6 +123,51 @@ int main() {
 
 ---
 
+## 6. Example from lecutre
+
+```cpp
+
+#include <iostream>
+#include <memory>
+
+using namespace std;
+
+struct A {
+    int x;
+
+    A() : x(0) {
+        cout << "A constructor (default)\n";
+    }
+
+     A(int x) : x(x) {
+        cout << "A constructor(" << x << ")\n";
+    }
+
+    ~A() {
+        cout << "A destructor(" << x << ")\n";
+    }
+};
+
+int main() {
+    A a;
+    A b(10);
+    a.x++;
+
+    A* p = &a;
+    p->x += 10;
+
+    A* c = new A(100);
+    // a dangling memory reference you need to delete it using delete c;
+    unique_ptr<A> ptr = make_unique<A>(1000);
+    cout << ptr->x << endl;
+
+    return 0;
+}
+
+
+```
+
+
 ## 6. Conclusion
 
 While C and C++ share the same basic concept of pointers, C++ introduces several enhancements and additional features that make working with pointers safer and more efficient:
@@ -134,9 +179,6 @@ While C and C++ share the same basic concept of pointers, C++ introduces several
 | References             | Not available              | Supported                    |
 | Smart Pointers         | Not available              | `unique_ptr`, `shared_ptr`, `weak_ptr` |
 
-By leveraging these C++ features, you can write safer, more efficient, and more maintainable code. Happy coding! 🚀
+
 ```
 
----
-
-This tutorial highlights the key differences between C and C++ in how pointers are used and managed, excluding function pointers. It is written in Markdown format for easy readability and use in any Markdown editor or viewer.

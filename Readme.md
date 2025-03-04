@@ -63,6 +63,15 @@ Function declaration vs function definition
 - [Pointers C](topics/pointers)
 - [Pointers C++](topics/pointers++)
 
+# Week 6
+- Classes  [tutorial](topics/classes.md)
+- Multiple files (project across multiple files) [cat](problems/cat/)
+- virtual methods
+- Scott Meyers, in Effective C++, provides a useful guideline:
+
+    > if a class has any virtual function, it should have a virtual destructor, and that classes not designed to be base classes or not designed to be used polymorphically should not declare virtual destructors.
+
+
 ## Next Topics:
 - Include files and paths
 - Debugging

@@ -65,7 +65,7 @@ Function declaration vs function definition
 
 # Week 6
 - Classes  [tutorial](topics/classes.md)
-- Multiple files (project across multiple files) [cat](problems/cat/)
+- Multiple files (project across multiple files) [cat](https://github.com/TeachingOW/CPP/tree/main/problems/cat)
 - virtual methods
 - Scott Meyers, in Effective C++, provides a useful guideline:
 

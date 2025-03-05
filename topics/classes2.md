@@ -10,7 +10,7 @@ class B{
   B(){
    ptr=new int[2]; 
   }
-  B::~B(){
+  ~B(){
     delete [] ptr;
   }
   int* ptr;
@@ -23,7 +23,10 @@ B b2=b1;
   return 0;
 }
 
+
 ```
+
+*Memory leaks*
 
 # Multiple Inheritance in C++
 

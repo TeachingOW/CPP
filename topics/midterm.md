@@ -93,6 +93,8 @@ int main() {
 
 ### 1. (10 Marks) Write a C++ function that takes two integers as input (a base and an exponent) and returns the result of raising the base to the power of the exponent.  
    - Both base and exponent will be integers.
+    - Do not use built-in functions.
+    - Make it as efficient as possible.
 
 ---
 
@@ -116,3 +118,4 @@ int main() {
 ### 4. (10 Marks) Write a C++ function that takes a string as input and returns a new string with all lowercase letters converted to uppercase.  
    - **Hint:** Use a loop and pointer arithmetic to iterate through the characters in the string.
 
+### 5. Write a C++ class representing complex numbers.

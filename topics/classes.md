@@ -246,7 +246,22 @@ class Car {
         Car(std::string b, int y, int i) : brand(b), year(y), id(i) {}
 };
 ```
-
+This is equivlant to
+```
+class Car {
+    private:
+        std::string brand;
+        int year;
+        const int id;
+        
+    public:
+        Car(std::string b, int y, int i) : {
+            brand=b;
+            year=y;
+            id=i;
+        }
+};
+```
 ---
 
 ## Summary

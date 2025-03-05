@@ -72,7 +72,7 @@ Function declaration vs function definition
     > if a class has any virtual function, it should have a virtual destructor, and that classes not designed to be base classes or not designed to be used polymorphically should not declare virtual destructors.
 
 - Classes II [tutorial](topics/classes2.md)
-- Midterm Review [tutorial](topics/midterm.md)
+- Midterm Review [review](topics/midterm.md)
 ## Next Topics:
 - Rule of 3 and Rule of 5
 - operator overloading

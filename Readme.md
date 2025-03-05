@@ -73,6 +73,12 @@ Function declaration vs function definition
 
 - Classes II [tutorial](topics/classes2.md)
 - Midterm Review [review](topics/midterm.md)
+- Questions from midterm: 
+    - [Power](https://raw.githubusercontent.com/TeachingOW/CPP/refs/heads/main/codesnippets/power.cpp) 
+    - [To lower char*](https://github.com/TeachingOW/CPP/blob/main/codesnippets/tolower.cpp)
+    
+
+
 ## Next Topics:
 - Rule of 3 and Rule of 5
 - operator overloading

@@ -247,7 +247,7 @@ class Car {
 };
 ```
 This is equivlant to
-```
+```c++
 class Car {
     private:
         std::string brand;
@@ -255,7 +255,7 @@ class Car {
         const int id;
         
     public:
-        Car(std::string b, int y, int i) : {
+        Car(std::string b, int y, int i)  {
             brand=b;
             year=y;
             id=i;

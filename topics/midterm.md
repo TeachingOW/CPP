@@ -98,7 +98,7 @@ int main() {
 
 ---
 
-### 2. (10 Marks) Write a C++ function that takes a string as input and returns a new string with all the characters reversed.  
+### 2. (10 Marks) Write a C++ function that takes a char *  as input and reverse all characters in place.
    - **Example:**  
      - **Input:** `"Hello"`  
      - **Output:** `"olleH"`
@@ -115,7 +115,7 @@ int main() {
 
 ---
 
-### 4. (10 Marks) Write a C++ function that takes a string as input and returns a new string with all lowercase letters converted to uppercase.  
+### 4. (10 Marks) Write a C++ function that takes char* as input and converts all letters to lower case in place.  
    - **Hint:** Use a loop and pointer arithmetic to iterate through the characters in the string.
 
 ### 5. Write a C++ class representing complex numbers.

@@ -92,9 +92,9 @@ int main() {
 ## B- Solve three (3) of the following four problems:
 
 ### 1. (10 Marks) Write a C++ function that takes two integers as input (a base and an exponent) and returns the result of raising the base to the power of the exponent.  
-   - Both base and exponent will be integers.
-    - Do not use built-in functions.
-    - Make it as efficient as possible.
+- Both base and exponent will be integers.
+- Do not use built-in functions.
+- Make it as efficient as possible.
 
 ---
 

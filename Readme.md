@@ -71,18 +71,17 @@ Function declaration vs function definition
 
     > if a class has any virtual function, it should have a virtual destructor, and that classes not designed to be base classes or not designed to be used polymorphically should not declare virtual destructors.
 
+- Classes II [tutorial](topics/classes2.md)
 
 ## Next Topics:
-- Include files and paths
-- Debugging
-- scope /local variable/global variable 
-- pointers
-- casting
-- strings in C/C++
 - Rule of 3 and Rule of 5
 - operator overloading
+
+- Debugging
+- scope /local variable/global variable 
+- casting
+- strings in C/C++
 - templates
-- virtual functions
 - containers/iterators
 - auto, shorthand notations
 - lambda

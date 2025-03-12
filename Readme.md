@@ -77,7 +77,9 @@ Function declaration vs function definition
     - [Power](https://raw.githubusercontent.com/TeachingOW/CPP/refs/heads/main/codesnippets/power.cpp) 
     - [To lower char*](https://github.com/TeachingOW/CPP/blob/main/codesnippets/tolower.cpp)
     
-
+# Week 7
+- Operator overloading [tutorial](topics/operator.md)
+- Template [tutorial](topics/termplate.md)
 
 ## Next Topics:
 - Rule of 3 and Rule of 5

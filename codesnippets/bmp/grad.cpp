@@ -17,30 +17,62 @@ void draw_rectangle(BMP &bmp,int x, int y, int l, int h, int b){
     }
 }
 
-color gradColor(color c1, color c2, int x, int y){
+color gradColor(color c1, color c2, int x, int y, int s){
 
-    double t=sqrt(500*500*2);
+    double t=sqrt(s*s*2);
     double d=sqrt(x*x+y*y);
     double ratio=d/t;
    color c;
-   c.r=(c1.r-c2.r)*ratio+c1.r;
-   c.g=(c1.g-c2.g)*ratio+c1.g;
-   c.b=(c1.b-c2.b)*ratio+c1.b;
+   c.r=(c2.r-c1.r)*ratio+c1.r;
+   c.g=(c2.g-c1.g)*ratio+c1.g;
+   c.b=(c2.b-c1.b)*ratio+c1.b;
     return c;
 }
 
+
+color gradColor2(color c1, color c2, int x, int y, int s) {
+
+    double t = (s * s * 2);
+    double d = (x * x + y * y);
+    
+    double ratio =d/t; 
+    
+    color c;
+    c.r = (c2.r - c1.r) * ratio + c1.r;
+    c.g = (c2.g - c1.g) * ratio + c1.g;
+    c.b = (c2.b - c1.b) * ratio + c1.b;
+    
+    return c;
+}
+
+
+color gradColor3(color c1, color c2, int x, int y, int s){
+
+    double t = sqrt(s * s * 2);
+    double d = sqrt(x * x + y * y);
+    
+    // Non-linear ratio using a sine function (scaled to [0, 1] range)
+    double ratio = (sin(d / t * M_PI - M_PI / 2) + 1) / 2;  // Sinusoidal transition
+    
+    // Calculate the new color using the non-linear ratio
+    color c;
+    c.r = (c2.r - c1.r) * ratio + c1.r;
+    c.g = (c2.g - c1.g) * ratio + c1.g;
+    c.b = (c2.b - c1.b) * ratio + c1.b;
+    return c;
+}
 int main() {
     
-    color c1(0,255,0);
-    color c2(255,0,0);
+    color c1(255,0,0);
+    color c2(255,100,255);
     BMP bmp(500, 500); 
     for(int i=0;i<=500;i++)
     for(int j=0;j<=500;j++){
-        color c=gradColor(c1,c2,i,j);   
+        color c=gradColor3(c1,c2,i,j,500);   
         bmp.set_pixel(i,j,c.r,c.b,c.g);
     }
     
-    bmp.write("grad.bmp"); // Save the image to a file
+    bmp.write("grad3.bmp"); // Save the image to a file
 
     return 0;
 }

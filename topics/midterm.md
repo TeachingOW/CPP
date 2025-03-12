@@ -119,3 +119,15 @@ int main() {
    - **Hint:** Use a loop and pointer arithmetic to iterate through the characters in the string.
 
 ### 5. Write a C++ class representing complex numbers.
+
+## Comments on Exam
+
+Missing to return the value. </br>
+
+Using ch!='a' && ch!='e'  ... instead of ... </br>
+
+Confusing = with == </br>
+
+do not use efficient power </br>
+
+Writing calling code </br>

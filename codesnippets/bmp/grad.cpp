@@ -32,10 +32,10 @@ color gradColor(color c1, color c2, int x, int y, int s){
 
 color gradColor2(color c1, color c2, int x, int y, int s) {
 
-    double t = (s * s * 2);
-    double d = (x * x + y * y);
+    double t2 = (s * s * 2);
+    double d2 = (x * x + y * y);
     
-    double ratio =d/t; 
+    double ratio =d2/t2; 
     
     color c;
     c.r = (c2.r - c1.r) * ratio + c1.r;
@@ -63,12 +63,12 @@ color gradColor3(color c1, color c2, int x, int y, int s){
 }
 int main() {
     
-    color c1(255,0,0);
-    color c2(255,100,255);
+    color c1(255,255,255);
+    color c2(0,255,0);
     BMP bmp(500, 500); 
     for(int i=0;i<=500;i++)
     for(int j=0;j<=500;j++){
-        color c=gradColor3(c1,c2,i,j,500);   
+        color c=gradColor(c1,c2,i,j,500);   
         bmp.set_pixel(i,j,c.r,c.b,c.g);
     }
     

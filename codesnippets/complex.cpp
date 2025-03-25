@@ -116,7 +116,8 @@ public:
     }
 
     // Friend function to overload the << operator
-    friend std::ostream& operator<< (std::ostream& os, const ComplexNumber<T>& c) {
+     
+     friend std::ostream& operator<< (std::ostream& os, const ComplexNumber<T>& c){
         os << c.real;
         if (c.imag >= 0) {
             os << " + " << c.imag << "i";
@@ -124,9 +125,9 @@ public:
             os << " - " << -c.imag << "i";
         }
         return os;
-    }
-};
 
+     }
+};
 // Example user-defined type that doesn't have zero initialization
 class MyClass {
 public:

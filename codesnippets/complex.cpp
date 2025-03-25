@@ -1,15 +1,155 @@
+#include <iostream>
+#include <cmath>
+#include <type_traits>
 
+// Check if T can be initialized to zero (e.g., arithmetic types)
+template <typename T>
+using has_zero_init = std::is_arithmetic<T>;
 
-class complex{
+template <typename T, typename Enable = void>
+class ComplexNumber {
+private:
+    T real;
+    T imag;
 
-double real, img;
 public:
+    // Constructor for types that support zero initialization
+    ComplexNumber(T r = 0, T i = 0) : real(r), imag(i) {}
 
-complex():real{0}, img{0}{}
-}
-complex(double r, double i): real{r}, img{i}{}
-static void add(complex c1, complex c2){
-    return complex(c1.real+c2.real, c1.img+c2.img);
-}
+    // Getter functions
+    T getReal() const { return real; }
+    T getImag() const { return imag; }
 
+    // Setter functions
+    void setReal(T r) { real = r; }
+    void setImag(T i) { imag = i; }
+
+    // Add two complex numbers
+    ComplexNumber<T> operator + (const ComplexNumber<T>& other) {
+        return ComplexNumber<T>(real + other.real, imag + other.imag);
+    }
+
+    // Subtract two complex numbers
+    ComplexNumber<T> operator - (const ComplexNumber<T>& other) {
+        return ComplexNumber<T>(real - other.real, imag - other.imag);
+    }
+
+    // Multiply two complex numbers
+    ComplexNumber<T> operator * (const ComplexNumber<T>& other) {
+        T realPart = real * other.real - imag * other.imag;
+        T imagPart = real * other.imag + imag * other.real;
+        return ComplexNumber<T>(realPart, imagPart);
+    }
+
+    // Divide two complex numbers
+    ComplexNumber<T> operator / (const ComplexNumber<T>& other) {
+        T denom = other.real * other.real + other.imag * other.imag;
+        T realPart = (real * other.real + imag * other.imag) / denom;
+        T imagPart = (imag * other.real - real * other.imag) / denom;
+        return ComplexNumber<T>(realPart, imagPart);
+    }
+
+    // Calculate the magnitude of the complex number
+    T magnitude() const {
+        return std::sqrt(real * real + imag * imag);
+    }
+
+    // Friend function to overload the << operator
+    friend std::ostream& operator<< (std::ostream& os, const ComplexNumber<T>& c) {
+        os << c.real;
+        if (c.imag >= 0) {
+            os << " + " << c.imag << "i";
+        } else {
+            os << " - " << -c.imag << "i";
+        }
+        return os;
+    }
 };
+
+// Specialization for types that do not have a default zero constructor
+template <typename T>
+class ComplexNumber<T, typename std::enable_if<!has_zero_init<T>::value>::type> {
+private:
+    T real;
+    T imag;
+
+public:
+    // Constructor for non-arithmetic types (requires both real and imag values)
+    ComplexNumber(T r, T i) : real(r), imag(i) {}
+
+    // Getter functions
+    T getReal() const { return real; }
+    T getImag() const { return imag; }
+
+    // Setter functions
+    void setReal(T r) { real = r; }
+    void setImag(T i) { imag = i; }
+
+    // Add two complex numbers
+    ComplexNumber<T> operator + (const ComplexNumber<T>& other) {
+        return ComplexNumber<T>(real + other.real, imag + other.imag);
+    }
+
+    // Subtract two complex numbers
+    ComplexNumber<T> operator - (const ComplexNumber<T>& other) {
+        return ComplexNumber<T>(real - other.real, imag - other.imag);
+    }
+
+    // Multiply two complex numbers
+    ComplexNumber<T> operator * (const ComplexNumber<T>& other) {
+        T realPart = real * other.real - imag * other.imag;
+        T imagPart = real * other.imag + imag * other.real;
+        return ComplexNumber<T>(realPart, imagPart);
+    }
+
+    // Divide two complex numbers
+    ComplexNumber<T> operator / (const ComplexNumber<T>& other) {
+        T denom = other.real * other.real + other.imag * other.imag;
+        T realPart = (real * other.real + imag * other.imag) / denom;
+        T imagPart = (imag * other.real - real * other.imag) / denom;
+        return ComplexNumber<T>(realPart, imagPart);
+    }
+
+    // Calculate the magnitude of the complex number
+    T magnitude() const {
+        return std::sqrt(real * real + imag * imag);
+    }
+
+    // Friend function to overload the << operator
+    friend std::ostream& operator<< (std::ostream& os, const ComplexNumber<T>& c) {
+        os << c.real;
+        if (c.imag >= 0) {
+            os << " + " << c.imag << "i";
+        } else {
+            os << " - " << -c.imag << "i";
+        }
+        return os;
+    }
+};
+
+// Example user-defined type that doesn't have zero initialization
+class MyClass {
+public:
+    int value;
+    MyClass(int v) : value(v) {}
+    MyClass() = delete;  // No default constructor
+};
+
+int main() {
+    // For types that support zero initialization (e.g., int, float, etc.)
+    ComplexNumber<int> c1(3, 4);
+    ComplexNumber<int> c2(1, 2);
+
+    std::cout << "Complex Number 1: " << c1 << std::endl;
+    std::cout << "Complex Number 2: " << c2 << std::endl;
+
+    // Addition of complex numbers
+    ComplexNumber<int> sum = c1 + 3;
+    std::cout << "Sum: " << sum << std::endl;
+
+    // For a user-defined type (e.g., MyClass) that doesn't support zero initialization
+   // ComplexNumber<MyClass> c3(MyClass(10), MyClass(20));
+   // std::cout << "Complex Number with MyClass: " << c3 << std::endl;
+
+    return 0;
+}

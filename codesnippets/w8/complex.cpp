@@ -32,6 +32,10 @@ public:
         return ComplexNumber<T>(real - other.real, imag - other.imag);
     }
 
+    ComplexNumber<T> operator- () const /* const is important*/{
+        return ComplexNumber<T>( - real, - imag );
+    }
+
     // Multiply two complex numbers
     ComplexNumber<T> operator * (const ComplexNumber<T>& other) {
         T realPart = real * other.real - imag * other.imag;
@@ -54,12 +58,10 @@ public:
 
     // Friend function to overload the << operator
     friend std::ostream& operator<< (std::ostream& os, const ComplexNumber<T>& c) {
+        os << "(";
         os << c.real;
-        if (c.imag >= 0) {
-            os << " + " << c.imag << "i";
-        } else {
-            os << " - " << -c.imag << "i";
-        }
+         os << " + " << c.imag << "i";
+        os<<")";
         return os;
     }
 };
@@ -76,6 +78,9 @@ int main() {
     ComplexNumber<int> sum = c1 + 3;
     std::cout << "Sum: " << sum << std::endl;
 
+    ComplexNumber<ComplexNumber<int>> c;
+
+    std::cout << c;
 
     return 0;
 }

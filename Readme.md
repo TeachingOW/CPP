@@ -79,7 +79,7 @@ Function declaration vs function definition
     
 # Week 7
 - Operator overloading [tutorial](topics/operator.md)
-- Template [tutorial](topics/termplate.md)
+- Template [tutorial](topics/template.md)
 
 ## Next Topics:
 - Rule of 3 and Rule of 5

@@ -81,6 +81,13 @@ Function declaration vs function definition
 - Operator overloading [tutorial](topics/operator.md)
 - Template [tutorial](topics/template.md)
 
+# Week 8
+    - worked on complex numbers
+
+# Week 9
+    - simdjson
+        
+
 ## Next Topics:
 - Rule of 3 and Rule of 5
 - operator overloading

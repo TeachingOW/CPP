@@ -6,10 +6,16 @@ class T {
   T(){
     cout << "default\n";    a=1;
   }
+  
+  
   T(const T& t){
-   cout << "copy\n";
-   a=t.a;
-  }
+    cout << "copy\n";
+    a=t.a;
+   }
+   T(T&& t){
+    cout << "move constrcutor\n";
+    a=t.a;
+   }
   ~T(){
      cout << "deconstructor\n";
   }
@@ -19,13 +25,12 @@ class T {
     a=other.a;
     return *this;
   }
-  void multiply(int x){    a=a*x;  }
+  
   void print(){cout << "\n" << a << "\n";}
 };
 
 T fun( T &t1){
   T& t=t1;
-  t.multiply(5);
   return t;
 }
 int main(){

@@ -86,7 +86,11 @@ Function declaration vs function definition
 
 # Week 9
     - simdjson
-        
+
+# Week 10
+    - move Semantics
+    - [Move Semantics Tutorial](https://www.youtube.com/watch?v=Bt3zcJZIalk)         
+    - 
 
 ## Next Topics:
 - Rule of 3 and Rule of 5

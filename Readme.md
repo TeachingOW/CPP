@@ -82,20 +82,24 @@ Function declaration vs function definition
 - Template [tutorial](topics/template.md)
 
 # Week 8
-    - worked on complex numbers
+- worked on complex numbers
 
 # Week 9
-    - simdjson
+- simdjson
 
 # Week 10
-    - move Semantics
-    - [Move Semantics Tutorial](https://www.youtube.com/watch?v=Bt3zcJZIalk)         
-    - 
+- move Semantics:  [tutorial](https://www.youtube.com/watch?v=Bt3zcJZIalk)         
+- Rule of 5: [tutorial](https://www.youtube.com/watch?v=juAZDfsaMvY)
+- priority queue : [reference](https://en.cppreference.com/w/cpp/container/priority_queue)
+
+
 
 ## Next Topics:
-- Rule of 3 and Rule of 5
-- operator overloading
 
+<!-- - operator overloading-->
+- Shortest path in a road network
+- SIMDJSON
+- Parquet
 - Debugging
 - scope /local variable/global variable 
 - casting

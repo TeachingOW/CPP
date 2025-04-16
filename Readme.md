@@ -85,14 +85,15 @@ Function declaration vs function definition
 - worked on complex numbers
 
 # Week 9
-- simdjson
+- simdjson, [quick start](https://github.com/TeachingOW/simdjson-quickstart)
 
 # Week 10
 - move Semantics:  [tutorial](https://www.youtube.com/watch?v=Bt3zcJZIalk)         
 - Rule of 5: [tutorial](https://www.youtube.com/watch?v=juAZDfsaMvY)
 - priority queue : [reference](https://en.cppreference.com/w/cpp/container/priority_queue)
 
-
+# Week 12
+    - vector implementations
 
 ## Next Topics:
 

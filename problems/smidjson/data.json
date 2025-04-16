@@ -1,0 +1,53 @@
+{
+    "company": {
+        "name": "TechCorp",
+        "departments": {
+            "engineering": {
+                "teams": {
+                    "backend": {
+                        "members": [
+                            {
+                                "name": "Alice",
+                                "role": "Senior Developer",
+                                "skills": ["Java", "Python", "SQL"]
+                            },
+                            {
+                                "name": "Bob",
+                                "role": "Junior Developer",
+                                "skills": ["Node.js", "MongoDB"]
+                            }
+                        ]
+                    },
+                    "frontend": {
+                        "members": [
+                            {
+                                "name": "Charlie",
+                                "role": "UI/UX Designer",
+                                "skills": ["Figma", "Sketch", "CSS"]
+                            },
+                            {
+                                "name": "Diana",
+                                "role": "Frontend Developer",
+                                "skills": ["React", "JavaScript", "HTML"]
+                            }
+                        ]
+                    }
+                }
+            },
+            "hr": {
+                "employees": [
+                    {
+                        "name": "Eve",
+                        "role": "HR Manager",
+                        "experience": 8
+                    },
+                    {
+                        "name": "Frank",
+                        "role": "Recruiter",
+                        "experience": 3
+                    }
+                ]
+            }
+        }
+    }
+}

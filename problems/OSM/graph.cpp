@@ -60,6 +60,9 @@ void parse_osm(const char* filename) {
                     const char* v = child->Attribute("v");
                     if (k && std::string(k) == "highway") {
                         is_hw = true;
+
+
+                        
                     }
                     if (k && std::string(k) == "name") {
                         way.name = v ? v : "";

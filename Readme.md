@@ -93,8 +93,11 @@ Function declaration vs function definition
 - priority queue : [reference](https://en.cppreference.com/w/cpp/container/priority_queue)
 
 # Week 12
-    - vector implementations
+- vector implementations
 
+# Week 13
+ -  OSM Project: [quick start](https://github.com/TeachingOW/OSM-quickstart.git)
+  
 ## Next Topics:
 
 <!-- - operator overloading-->

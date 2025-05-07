@@ -1,1 +1,7 @@
 a.out
+*.o
+*.bmp
+*.svg
+graph
+highways
+main

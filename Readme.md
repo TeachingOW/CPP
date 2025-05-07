@@ -98,10 +98,13 @@ Function declaration vs function definition
 # Week 13
  -  OSM Project: [quick start](https://github.com/TeachingOW/OSM-quickstart.git)
   
+# Week 15
+- Revision
+
 ## Next Topics:
 
 <!-- - operator overloading-->
-- Shortest path in a road network
+<!-- - Shortest path in a road network
 - SIMDJSON
 - Parquet
 - Debugging
@@ -110,7 +113,7 @@ Function declaration vs function definition
 - strings in C/C++
 - templates
 - containers/iterators
-- auto, shorthand notations
+- auto, shorthand notations -->
 - lambda
 
 

@@ -100,8 +100,8 @@ Function declaration vs function definition
   
 # Week 15
 - Revision
-- Histogram [code](codesnippets/review/buckets.cpp)
-- Bit Vector [code](codesnippets/review/bitvector.cpp)
+- Histogram [code](review/buckets.cpp)
+- Bit Vector [code](review/bitvector.cpp)
 
 ## Next Topics:
 

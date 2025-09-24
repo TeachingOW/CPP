@@ -138,12 +138,12 @@ In C++, 2D arrays are typically stored in row-major order in memory. This means 
 
 #### C++
 ```cpp
-int matrix[2][3] = { {1, 2, 3}, {4, 5, 6}};
+int matrix[2][3] = { {10, 20, 30}, {40, 50, 60}};
 ```
 
 ### Visual Representation:
 ```
-[1] [2] [3]  |  [4] [5] [6] 
+[10]     [20]  [30]  |  [40]    [50]  [60] 
 0x1000 0x1004 0x1008 | 0x100C 0x1010 0x1014
 ```
 

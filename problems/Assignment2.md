@@ -40,7 +40,7 @@ function floodFill(image, startX, startY, fillColor):
         (x, y) = remove the first element from the deque
         mark visited[x][y] to true
         if image.get_pixel(x, y) == startColor:
-            image.set_pixel(x, y, fillColor.r, fillc)
+            image.set_pixel(x, y, fillColor)
             for each neighbor (nx, ny) of (x, y):
                 if nx and ny are within image bounds and not visited[nx][ny]:
                     add (nx, ny) to the deque
